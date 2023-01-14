@@ -22,3 +22,5 @@ if achou is True:
     print(f'O valor foi encontrado na {metade + 1}° posição.')
 else:
     print('O valor não foi encontrado.')
+
+# Código Funcionando Corretamente
