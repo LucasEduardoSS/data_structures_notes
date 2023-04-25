@@ -3,6 +3,9 @@ Algoritmo de Ordenação QuickSort presenta na página 15
 do pdf da aula 2 de Estruta de Dados e Algoritmos
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+
 void troca(int x[], int i, int j) {
     int aux;
 
@@ -17,7 +20,7 @@ int particao(int x[], int inicio, int fim) {
     int pos_pivo, pivo, i, j;
 
     // Calculates pivot position
-    pos_pivo = (inicio + fim)/2;
+    pos_pivo = (int)(inicio + fim)/2;
 
     // Atributes pivot value to the auxiliar variable
     pivo = x[pos_pivo];
@@ -57,22 +60,22 @@ void quickSort(int x[], int inicio, int fim){
     }
 }
 
-#include <stdio.h>
-#include <stdlib.h>
 
 int main() {
-    int x[10];
+    int x[10] = {5, 9, 4, 6, 8, 1, 3, 11, 15, 7};
     int i;
 
     // 
-    for (i=0; i < sizeof(x)-1; i++) {
-        printf(x[i]);
+    for (i=0; i < (int)(sizeof(x)/4); i++) {
+        printf("%d", x[i]);
     }
 
     // Calls quicksort function
-    quickSort(x, 0, sizeof(x));
+    quickSort(x, 0, (int)sizeof(x)/4);
 
-    for (i=0; i < sizeof(x)-1; i++) {
-        printf(x[i]);
+    for (i=0; i < (int)(sizeof(x)/4); i++) {
+        printf("%d", x[i]);
+
+    return 0;
     }
 }
