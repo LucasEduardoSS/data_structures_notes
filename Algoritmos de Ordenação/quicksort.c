@@ -6,6 +6,7 @@ do pdf da aula 2 de Estruta de Dados e Algoritmos
 #include <stdio.h>
 #include <stdlib.h>
 
+// Changes the list element position
 void troca(int x[], int i, int j) {
     int aux;
 
